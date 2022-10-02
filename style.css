@@ -8,7 +8,7 @@
   --background: rgb(130, 130, 130);
   --clock-background: black;
   --digit-color: white;
-  --clock-width: 1000px;
+  --clock-width: 500px;
   --clock-height: calc(var(--clock-width) * .4);
 }
 
@@ -26,72 +26,8 @@ body {
   translate: -50% -50%;
 }
 
-.digit {
-  padding: 2.2%;
-}
-
-.digit:first-child {
-  border: 1px solid white;
-  width: calc(var(--clock-width) / 4);
+.container .hours {
   height: var(--clock-height);
-}
-
-.digit:nth-child(2) {
-  border: 1px solid white;
   width: calc(var(--clock-width) / 4);
-  height: var(--clock-height);
-  transform: translateX(100%) translateY(-100%);
-}
-
-.digit:nth-child(3) {
   border: 1px solid white;
-  width: calc(var(--clock-width) / 4);
-  height: var(--clock-height);
-  transform: translateX(200%) translateY(-200%);
-}
-
-.digit:nth-child(4) {
-  border: 1px solid white;
-  width: calc(var(--clock-width) / 4);
-  height: var(--clock-height);
-  transform: translateX(300%) translateY(-300%);
-}
-
-.digit span.active {
-  position: absolute;
-  background-color: var(--digit-color);
-  height: calc(var(--clock-height) * .15);
-  width: calc(var(--clock-width) * .2);
-  border-radius: 50px;
-}
-
-span.active:nth-child(2) {
-  transform: rotate(90deg) translateX(35%) translateY(-117%);
-}
-
-span.active:nth-child(3) {
-  transform: rotate(90deg) translateX(110%) translateY(-117%);
-}
-
-span.active:nth-child(4) {
-  transform: translateY(500%);
-}
-
-span.active:nth-child(5) {
-  transform: rotate(90deg) translateX(110%) translateY(117%);
-}
-
-span.active:nth-child(6) {
-  transform: rotate(90deg) translateX(35%) translateY(117%);
-}
-
-span.active:nth-child(7) {
-  transform: translateY(250%);
-}
-
-span.active:nth-child(2),
-span.active:nth-child(3),
-span.active:nth-child(5),
-span.active:nth-child(6) {
-  width: calc(var(--clock-width) * .2);
 }

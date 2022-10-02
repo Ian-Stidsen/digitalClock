@@ -8,8 +8,10 @@
   --background: rgb(130, 130, 130);
   --clock-background: black;
   --digit-color: white;
-  --clock-width: 500px;
-  --clock-height: calc(var(--clock-width) * .3);
+  /* changing the clock width will change every elements size
+   to keep the same dimensions*/
+  --clock-width: 75vw;
+  --clock-height: calc(var(--clock-width) * .25);
 }
 
 body {
@@ -29,36 +31,25 @@ body {
   align-items: center;
 }
 
-#hours {
-  display: flex;
-  height: var(--clock-height);
-  width: calc(var(--clock-width) / 3);
-  color: var(--digit-color);
-  font-size: calc(var(--clock-height) * 1);
-  justify-content: center;
-  align-items: center;
-  transform: translateX(2%);
-}
-
-#minutes {
-  display: flex;
-  height: var(--clock-height);
-  width: calc(var(--clock-width) / 3);
-  color: var(--digit-color);
-  font-size: calc(var(--clock-height) * 1);
-  justify-content: center;
-  align-items: center;
-  transform: translateX(2%);
-}
-
+#hours,
+#minutes,
 #seconds {
   display: flex;
   height: var(--clock-height);
   width: calc(var(--clock-width) / 3);
   color: var(--digit-color);
-  font-size: var(--clock-height);
+  font-size: calc(var(--clock-height) * .9);
   justify-content: center;
   align-items: center;
-  transform: translateX(2%);
+  transform: translateX(5%);
 }
 
+#seconds {
+  translate: -10%;
+}
+
+@media (max-width: 400px) {
+  :root {
+    --clock-width: 300px;
+  }
+}

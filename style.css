@@ -9,7 +9,7 @@
   --clock-background: black;
   --digit-color: white;
   --clock-width: 500px;
-  --clock-height: calc(var(--clock-width) * .4);
+  --clock-height: calc(var(--clock-width) * .3);
 }
 
 body {
@@ -24,10 +24,41 @@ body {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container .hours {
+#hours {
+  display: flex;
   height: var(--clock-height);
-  width: calc(var(--clock-width) / 4);
-  border: 1px solid white;
+  width: calc(var(--clock-width) / 3);
+  color: var(--digit-color);
+  font-size: calc(var(--clock-height) * 1);
+  justify-content: center;
+  align-items: center;
+  transform: translateX(2%);
 }
+
+#minutes {
+  display: flex;
+  height: var(--clock-height);
+  width: calc(var(--clock-width) / 3);
+  color: var(--digit-color);
+  font-size: calc(var(--clock-height) * 1);
+  justify-content: center;
+  align-items: center;
+  transform: translateX(2%);
+}
+
+#seconds {
+  display: flex;
+  height: var(--clock-height);
+  width: calc(var(--clock-width) / 3);
+  color: var(--digit-color);
+  font-size: var(--clock-height);
+  justify-content: center;
+  align-items: center;
+  transform: translateX(2%);
+}
+

@@ -19,6 +19,36 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.container h1 {
+  display: flex;
+  font-size: 10vw;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#timezone-label,
+#timezone-menu { 
+  display: flex;
+  position: relative;
+  width: 20vw;
+  font-size: 2vw;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#timezone-label {
+  justify-content: center;
+  font-size: 3vw;
+}
+
+.clock {
   background-color: var(--clock-background);
   position: absolute;
   width: var(--clock-width);

@@ -19,11 +19,9 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 .container h1 {
   display: flex;
@@ -38,7 +36,7 @@ body {
   position: relative;
   width: 20vw;
   font-size: 2vw;
-  top: 20%;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -50,15 +48,10 @@ body {
 
 .clock {
   background-color: var(--clock-background);
-  position: absolute;
   width: var(--clock-width);
   height: var(--clock-height);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  transform: translate(20%, 70%);
 }
 
 #hours,
